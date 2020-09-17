@@ -17,7 +17,7 @@ public class negatievgetal extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.setColor(Color.YELLOW);
+        g.setColor(Color.yellow);
         g.drawString("De uitkomst " + uitkomst, 40, 20);
     }
 }

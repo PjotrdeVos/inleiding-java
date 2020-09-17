@@ -37,7 +37,7 @@ public class Tijd extends Applet {
         g.drawString("Seconden in 1 dag is: " + uitkomst1,20,50);
         g.drawString("Seconden", 190,50);
 
-        g.drawString("Seconden in 1 jaar is:" + uitkomst2,20,80);
+        g.drawString("Seconden in 1 jaar is: " + uitkomst2,20,80);
         g.drawString("Seconden", 200,80);
     }
 }

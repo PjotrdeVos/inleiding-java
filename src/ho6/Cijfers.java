@@ -24,6 +24,6 @@ public class Cijfers extends Applet {
 
     public void paint(Graphics g) {
 
-        g.drawString("De uitkomst voor Jan is: " + uitkomst, 20, 20);
+        g.drawString("Het gemiddelde is" + uitkomst, 20, 20);
     }
 }
