@@ -4,24 +4,44 @@ import java.awt.event.*;
 
 public class BTW extends Applet {
     TextField tekstvak;
-    Label label;
-    double getal;
+    String s;
+    double a, b, getal, PrijsINC , BTW;
+    Button OK;
+    Button RESET;
 
     public void init() {
         tekstvak = new TextField("", 20);
-        label = new Label("Type de prijs");
-        tekstvak.addActionListener( new TekstvakListener() );
-        add(label);
+        tekstvak.addActionListener( new ButtonListener() );
+        OK = new Button("OK");
+        RESET = new Button("RESET");
+        OK.addActionListener(new ButtonListener());
+        RESET.addActionListener(new Reset());
+        s = "";
+        a = 100;
+        b = 21;
         add(tekstvak);
+        add(OK);
+        add(RESET);
     }
 
     public void paint(Graphics g) {
-        g.drawString("De prijs inc BTW is" + getal, 50, 60 );
+        g.drawString(String.valueOf(PrijsINC), 50, 60 );
     }
 
-    class TekstvakListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            String s = tekstvak.getText();
+    class ButtonListener implements ActionListener    {
+        public void actionPerformed( ActionEvent e ) {
+            s = tekstvak.getText();
+            getal = Double.parseDouble( s);
+            BTW = (getal / a) * b;
+            PrijsINC = BTW + PrijsINC;
+            repaint();
+        }
+    }
+
+    class Reset implements ActionListener {
+        public void actionPerformed( ActionEvent e ) {
+            tekstvak.setText ("");
+            s = "";
             repaint();
         }
     }
