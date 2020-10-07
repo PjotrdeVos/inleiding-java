@@ -7,8 +7,8 @@ public class H102 extends Applet {
     
     TextField Tekstvak;
     double Tekst;
-    double Getal
-    String S;
+    double Getal;
+    String String;
     Label Label;
     double Laagstgetal;
 
@@ -31,10 +31,10 @@ public class H102 extends Applet {
         g.drawString("het laagste : " + Laagstgetal,20,70);
     }
 
-    private class Tekstvaklistener implements ActionListener {
+    public class Tekstvaklistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            S = Tekstvak.getText();
-            Tekst = Double.parseDouble(S);
+            String = Tekstvak.getText();
+            Tekst = Double.parseDouble(String);
             if (Tekst > Getal ) {
                 Getal = Tekst;
             }

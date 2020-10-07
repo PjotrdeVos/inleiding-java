@@ -27,7 +27,7 @@ public class H101 extends Applet {
         g.drawString("Het getal" + Getal,20,50);
     }
 
-    private class Tekstvaklistener implements ActionListener {
+    public class Tekstvaklistener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             S = Tekstvak.getText();
             Tekst = Double.parseDouble(S);

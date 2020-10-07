@@ -29,7 +29,7 @@ public class H103 extends Applet {
         g.drawString(Uitkomst,20,50);
     }
 
-    private class Listener implements ActionListener {
+    public class Listener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             StringMaand = MaandText.getText();
             Maand = Double.parseDouble(StringMaand);
