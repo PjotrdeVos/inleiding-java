@@ -18,6 +18,16 @@ public class PraktijkH11 extends Applet{
     }
 
     public void paint (Graphics g) {
+        g.drawString(Getal1 + "x1=" + Getal1 * 1 +"" ,50,20);
+        g.drawString(Getal1 + "x2=" + Getal1 * 2 +"" ,50,50);
+        g.drawString(Getal1 + "x3=" + Getal1 * 3 +"" ,50,80);
+        g.drawString(Getal1 + "x4=" + Getal1 * 4 +"" ,50,110);
+        g.drawString(Getal1 + "x5=" + Getal1 * 5 +"" ,50,140);
+        g.drawString(Getal1 + "x6=" + Getal1 * 6 +"" ,50,170);
+        g.drawString(Getal1 + "x7=" + Getal1 * 7 +"" ,50,200);
+        g.drawString(Getal1 + "x8=" + Getal1 * 8 +"" ,50,230);
+        g.drawString(Getal1 + "x9=" + Getal1 * 9 +"" ,50,260);
+        g.drawString(Getal1 + "x10=" + Getal1 * 10 +"" ,50,290);
 
     }
 
@@ -25,37 +35,8 @@ public class PraktijkH11 extends Applet{
         public void actionPerformed(ActionEvent e) {
             String s = Cijfer1.getText();
             Getal1 = Integer.parseInt(s);
-            if (Getal1 == 1) {
-                getGraphics().drawString(Getal1 + "x1=" + Getal1 * 1 +"" ,50,20);
-                getGraphics().drawString("1x2=2",50,50);
-                getGraphics().drawString("1x3=3",50,80);
-                getGraphics().drawString("1x4=4",50,110);
-                getGraphics().drawString("1x5=5",50,140);
-                getGraphics().drawString("1x6=6",50,170);
-                getGraphics().drawString("1x7=7",50,200);
-                getGraphics().drawString("1x8=8",50,230);
-                getGraphics().drawString("1x9=9",50,260);
-                getGraphics().drawString("1x10=10",50,290);
 
-            }
-
-
-
-
-            if (Getal1 == 2) {
-                getGraphics().drawString("2x1=2",50,20);
-                getGraphics().drawString("2x2=4",50,50);
-                getGraphics().drawString("2x3=6",50,80);
-                getGraphics().drawString("2x4=8",50,110);
-                getGraphics().drawString("2x5=10",50,140);
-                getGraphics().drawString("2x6=12",50,170);
-                getGraphics().drawString("2x7=14",50,200);
-                getGraphics().drawString("2x8=16",50,230);
-                getGraphics().drawString("2x9=18",50,260);
-                getGraphics().drawString("2x10=20",50,290);
-
-            }
-
+            repaint();
         }
     }
 }
